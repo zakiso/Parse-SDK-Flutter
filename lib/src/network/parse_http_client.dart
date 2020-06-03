@@ -32,6 +32,8 @@ class ParseHTTPClient extends BaseClient {
       request.headers[keyHeaderMasterKey] = data.masterKey;
 
     /// If developer wants to add custom headers, extend this class and add headers needed.
+    additionalHeaders ??= data.additionalHeader;
+
     if (additionalHeaders != null && additionalHeaders.isNotEmpty) {
       additionalHeaders
           .forEach((String key, String value) => request.headers[key] = value);

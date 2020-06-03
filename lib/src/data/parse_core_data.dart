@@ -22,6 +22,7 @@ class ParseCoreData {
       String clientKey,
       String sessionId,
       bool autoSendSessionId,
+      Map<String,String> additionalHeader,
         SecurityContext securityContext,
         CoreStore store}) async {
     _instance = ParseCoreData._init(appId, serverUrl);
@@ -63,6 +64,7 @@ class ParseCoreData {
   String clientKey;
   String sessionId;
   bool autoSendSessionId;
+  Map<String,String> additionalHeader;
   SecurityContext securityContext;
   bool debug;
   CoreStore storage;
